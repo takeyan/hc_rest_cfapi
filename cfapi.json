@@ -1,0 +1,5 @@
+[
+{"name":"US","url":"https://api.ng.bluemix.net/v2/info"},
+{"name":"EU","url":"https://api.eu-gb.bluemix.net/v2/info"},
+{"name":"AU","url":"https://api.au-syd.bluemix.net/v2/info"}
+]
