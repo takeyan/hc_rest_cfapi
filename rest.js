@@ -25,6 +25,7 @@ for (var i=0 ; i<dashboardInfo.length ; i++ ){
 	// handling client error events
 	dashboardClient[i].on('error', function (err) {
 	    console.error(dateFmt(new Date()) + " ***ERROR in node-rest-client\n", err);
+	    logWrite(logpath,dateFmt(new Date()) + " ***ERROR in node-rest-client\n", err);
 	});
 	console.log(dateFmt(new Date()) + " Target=" + dashboardInfo[i].name + " URL=" + dashboardInfo[i].url);
 	logWrite(logpath,dateFmt(new Date()) + " Target=" + dashboardInfo[i].name + " URL=" + dashboardInfo[i].url);
@@ -55,6 +56,7 @@ var loop = setInterval(function(){
 	    // handling specific req errors
 	    requestHandler[i].on('error', function (err) {
 	    	console.error(dateFmt(new Date()) + " ***ERROR Count=" + count + " in node-rest-client GET request.\n", err.request.options);
+	    	logWrite(logpath,dateFmt(new Date()) + " ***ERROR Count=" + count + " in node-rest-client GET request.\n", err.request.options);
 	    });
 	}
 
